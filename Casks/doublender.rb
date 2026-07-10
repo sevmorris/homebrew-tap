@@ -1,6 +1,6 @@
 cask "doublender" do
-  version "1.7.6lr"
-  sha256 "85f164175e386c9758b7d8a5f54106d20c204f1bf67d4ac292817e4d2657aa65"
+  version "1.7.7lr"
+  sha256 "13e65029e374ec6cb2304b0462827bbf4231d40af723277ef6ce49e06f26bbe7"
 
   url "https://github.com/sevmorris/DoublEnder/releases/download/v#{version}/DoublEnder-v#{version}.dmg",
       verified: "github.com/sevmorris/DoublEnder/"

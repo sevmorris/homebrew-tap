@@ -1,6 +1,6 @@
 cask "fl2601" do
-  version "1.2"
-  sha256 "aef1f4ee1d9a72527d29cc23ba3071859b4ce54f1fad9215ac2ab8e7961f5974"
+  version "1.2.1"
+  sha256 "7c9430595aa8641642f4c42b131348c2f3636fbd68517c07a452362d15bcd8b3"
 
   url "https://github.com/sevmorris/FL2601/releases/download/v#{version}/FL2601-Cipher-Tool-#{version}.dmg",
       verified: "github.com/sevmorris/FL2601/"

@@ -2,8 +2,7 @@ cask "fl2601" do
   version "1.2.1"
   sha256 "7c9430595aa8641642f4c42b131348c2f3636fbd68517c07a452362d15bcd8b3"
 
-  url "https://github.com/sevmorris/FL2601/releases/download/v#{version}/FL2601-Cipher-Tool-#{version}.dmg",
-      verified: "github.com/sevmorris/FL2601/"
+  url "https://github.com/sevmorris/FL2601/releases/download/v#{version}/FL2601-Cipher-Tool-#{version}.dmg"
   name "FL2601 Cipher Tool"
   desc "Passphrase text encryption using PBKDF2 and AES-256-GCM"
   homepage "https://sevmorris.github.io/FL2601/"

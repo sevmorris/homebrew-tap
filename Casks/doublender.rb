@@ -2,8 +2,7 @@ cask "doublender" do
   version "2.5.0lr"
   sha256 "1f9dfb382c6d4cf2c9cb13ea1969d48664c9f69426d2818e048d7c98debc8a15"
 
-  url "https://github.com/sevmorris/DoublEnder/releases/download/v#{version}/DoublEnder-v#{version}.dmg",
-      verified: "github.com/sevmorris/DoublEnder/"
+  url "https://github.com/sevmorris/DoublEnder/releases/download/v#{version}/DoublEnder-v#{version}.dmg"
   name "DoublEnder"
   desc "Guest-side double-ender podcast recorder"
   homepage "https://sevmorris.github.io/DoublEnder/"

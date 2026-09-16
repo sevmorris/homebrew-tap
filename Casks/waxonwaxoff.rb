@@ -1,6 +1,6 @@
 cask "waxonwaxoff" do
-  version "2.12.0"
-  sha256 "b3c8afc83e3a792930df2d07ede3d88f7eedb363adc5bfb56d94241480581f2a"
+  version "2.12.1"
+  sha256 "197e45451a84a093d98c2b380da266174848d305d3243ad1b4b9724c7b44fc69"
 
   url "https://github.com/sevmorris/WaxOnWaxOff/releases/download/v#{version}/WaxOnWaxOff-v#{version}.dmg"
   name "WaxOn/WaxOff"

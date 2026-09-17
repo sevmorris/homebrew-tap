@@ -7,6 +7,13 @@ cask "doublender" do
   desc "Guest-side double-ender podcast recorder"
   homepage "https://sevmorris.github.io/DoublEnder/"
 
+  # Retired 2026-09-17 in favour of the app's own update check — DoublEnder has
+  # had one since the recorder-hardening release, so the note in this tap's
+  # README claiming it cannot check for itself was out of date. See the longer
+  # explanation in waxonwaxoff.rb. The cask stays rather than being deleted so
+  # anyone who installed through it is told where the app went.
+  deprecate! date: "2026-09-17", because: "is updated by the app itself now — install it from its releases page"
+
   # 13.0 from both the app's LSMinimumSystemVersion and the repo's stated
   # environment. No `arch:` here on purpose — the README says Apple Silicon and
   # Intel, so constraining it would be a guess in the direction that breaks

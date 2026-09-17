@@ -7,6 +7,16 @@ cask "waxonwaxoff" do
   desc "Podcast audio prep: raw recording conditioning and delivery normalization"
   homepage "https://sevmorris.github.io/WaxOnWaxOff/"
 
+  # Retired 2026-09-17 in favour of the app's own update check, which every app
+  # in this collection now ships. Two update paths for one app is one too many:
+  # the in-app check hands you a DMG, installing it replaces the app underneath
+  # Homebrew, and Homebrew's records then describe a version that is no longer
+  # on disk — as they did here, four versions out of date, until the day this
+  # stanza was added. The cask stays rather than being deleted so anyone who
+  # installed through it is told where the app went. FL2601 keeps its cask: it
+  # is sandboxed with no network entitlement and cannot check for itself.
+  deprecate! date: "2026-09-17", because: "is updated by the app itself now — install it from its releases page"
+
   # Both are real constraints, not caution. The app ships a single-architecture
   # arm64 binary and bundles an arm64-only FFmpeg, and its deployment target is
   # 14.0. Without these the cask installs cleanly on an Intel or Ventura Mac and

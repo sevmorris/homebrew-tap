@@ -13,8 +13,8 @@ cask "waxonwaxoff" do
   # Homebrew, and Homebrew's records then describe a version that is no longer
   # on disk — as they did here, four versions out of date, until the day this
   # stanza was added. The cask stays rather than being deleted so anyone who
-  # installed through it is told where the app went. FL2601 keeps its cask: it
-  # is sandboxed with no network entitlement and cannot check for itself.
+  # installed through it is told where the app went. FL2601 kept its cask, as an
+  # app that cannot check for itself, until it was retired on 2026-09-23.
   deprecate! date: "2026-09-17", because: "is updated by the app itself now — install it from its releases page"
 
   # Both are real constraints, not caution. The app ships a single-architecture

@@ -2,27 +2,15 @@
 
 Homebrew tap for [Seven Morris](https://github.com/sevmorris)' macOS apps.
 
-One cask is live. The other two are deprecated: those apps update themselves
-now, and are installed from the DMG on their own releases page.
-
-## Install
-
-```sh
-brew install --cask sevmorris/tap/fl2601
-```
-
-Or add the tap once, then install by name:
-
-```sh
-brew tap sevmorris/tap
-brew install --cask fl2601
-```
+All three casks are deprecated. DoublEnder and WaxOn/WaxOff update themselves
+and are installed from the DMG on their own releases page. FL2601 was retired
+on 2026-09-23, with its Windows port.
 
 ## Casks
 
 | Cask | App | Status | |
 | --- | --- | --- | --- |
-| `fl2601` | Passphrase text encryption, PBKDF2 + AES-256-GCM | live | [repo](https://github.com/sevmorris/FL2601) · [site](https://sevmorris.github.io/FL2601/) |
+| `fl2601` | Passphrase text encryption, PBKDF2 + AES-256-GCM | retired 2026-09-23 | [repo](https://github.com/sevmorris/FL2601) · [site](https://sevmorris.github.io/FL2601/) |
 | `doublender` | Guest-side double-ender podcast recorder | deprecated 2026-09-17 | [releases](https://github.com/sevmorris/DoublEnder/releases) · [site](https://sevmorris.github.io/DoublEnder/) |
 | `waxonwaxoff` | Podcast audio prep: WaxOn conditioning, WaxOff delivery | deprecated 2026-09-17 | [releases](https://github.com/sevmorris/WaxOnWaxOff/releases) · [site](https://sevmorris.github.io/WaxOnWaxOff/) |
 
@@ -37,11 +25,12 @@ The other two run on any Mac their stated minimum supports.
 
 ## Updates
 
-**`fl2601` — Homebrew is the update path, by design.** The app is sandboxed with
-no network entitlement at all (it derives keys and encrypts in memory, and text
-moves via the clipboard), so it cannot check for its own updates and never
-will. `distribute.sh --bump-cask` bumps this cask on publish, so
-`brew upgrade --cask` tracks the latest build.
+**`fl2601` — retired, and still installable on purpose.** The app gets no
+further releases, so the cask stays at 1.2.1, its last build. It is deprecated
+rather than deleted because FL2601 must go on decrypting what it encrypted: the
+cask, the release DMG and the [web version](https://sevmorris.github.io/FL2601/web/)
+all stay available. Homebrew was this app's only update path, since it is
+sandboxed with no network entitlement and cannot check for itself.
 
 **Every other app checks GitHub for itself.** Each ships an `UpdateChecker` that
 reads its repo's latest release and offers the DMG. That is the one channel that

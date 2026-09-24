@@ -20,6 +20,11 @@ an existing `brew upgrade` says where the app went instead of failing on a cask
 that vanished. Nothing bumps their version any more, so they will fall behind
 the app; install from the releases page instead.
 
+Not for ever, though: Homebrew disables a deprecated cask a year after its
+deprecation date, and a disabled cask no longer installs. `doublender` and
+`waxonwaxoff` go on 2027-09-17, `fl2601` on 2027-09-23. Each app's releases page
+outlasts its cask.
+
 `waxonwaxoff` requires Apple Silicon and macOS 14 or later, and declares both.
 The other two run on any Mac their stated minimum supports.
 
@@ -27,9 +32,10 @@ The other two run on any Mac their stated minimum supports.
 
 **`fl2601` — retired, and still installable on purpose.** The app gets no
 further releases, so the cask stays at 1.2.1, its last build. It is deprecated
-rather than deleted because FL2601 must go on decrypting what it encrypted: the
-cask, the release DMG and the [web version](https://sevmorris.github.io/FL2601/web/)
-all stay available. Homebrew was this app's only update path, since it is
+rather than deleted because FL2601 must go on decrypting what it encrypted. The
+cask installs until Homebrew disables it; the release DMG and the
+[web version](https://sevmorris.github.io/FL2601/web/) stay available after
+that. Homebrew was this app's only update path, since it is
 sandboxed with no network entitlement and cannot check for itself.
 
 **Every other app checks GitHub for itself.** Each ships an `UpdateChecker` that
